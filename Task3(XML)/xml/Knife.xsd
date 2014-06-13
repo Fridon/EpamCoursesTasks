@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:element name="Knives" type="Knives"/>
+
+	<xs:complexType name="Knives">
+        <xs:sequence> 
+            <xs:element name="knife" type="KnifeType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+	<xs:element name = "knife" type = "KnifeType"/>
+	<xs:complexType name = "KnifeType">
+		<xs:sequence>
+			<xs:element name = "ID" type = "xs:ID"/>
+			<xs:element name = "type" type = "xs:string"/>
+			<xs:element name = "handy" type = "xs:string"/>
+			<xs:element name = "origin" type = "xs:string"/>
+			<xs:element name = "visuals" type = "Visuals"/>	
+			<xs:element name = "value" type = "xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name = "Visuals">
+		<xs:all>
+		
+			<xs:element name = "length">
+				<xs:simpleType>
+					<xs:restriction base = "xs:integer">
+					<xs:minInclusive value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			
+			<xs:element name = "width">
+				<xs:simpleType>
+					<xs:restriction base = "xs:integer">
+					<xs:minInclusive value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			
+			<xs:element name = "material" type = "xs:string"/>
+			
+			<xs:element name = "handle">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+						<xs:attribute name = "wooden" type = "xs:boolean"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name = "sink" type = "xs:boolean"/>
+		
+		</xs:all>	
+	</xs:complexType>
+</xs:schema>

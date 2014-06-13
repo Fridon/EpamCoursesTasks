@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Knife.xsl"?>
+
+<Knives xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Knife.xsd">
+	<knife>
+		<ID>Black_Steel_Katana</ID>
+		<type>Katana</type>
+		<handy>Twohanded</handy>
+		<origin>Japan</origin>
+		<visuals>
+			<length>100</length>
+			<width>30</width>
+			<material>Black steel</material>
+			<handle wooden = "true">Torreya</handle>
+			<sink>false</sink>
+		</visuals>
+		<value>true</value>
+	</knife>
+
+	<knife>
+		<ID>Broad_Sword</ID>
+		<type>Straight sword</type>
+		<handy>onehanded</handy>
+		<origin>India</origin>
+		<visuals>
+			<length>70</length>
+			<width>25</width>
+			<material>Steel</material>
+			<handle wooden = "false">Ivory</handle>
+			<sink>false</sink>
+		</visuals>
+		<value>true</value>
+	</knife>
+
+	<knife>
+		<ID>Training_Claymore</ID>
+		<type>Great straight sword</type>
+		<handy>twohanded</handy>
+		<origin>Germany</origin>
+		<visuals>
+			<length>170</length>
+			<width>40</width>
+			<material>duralumin</material>
+			<handle wooden = "true">Amaranth</handle>
+			<sink>true</sink>
+		</visuals>
+		<value>false</value>
+	</knife>
+
+</Knives>
